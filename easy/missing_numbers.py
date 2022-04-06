@@ -1,4 +1,5 @@
-# my solutions -----------------------------------------------
+# https://leetcode.com/problems/missing-number/
+# my solutions
 
 # first
 def missingNumber(nums):
@@ -13,8 +14,6 @@ def missingNumber(nums):
         return min_num-1
     return max_num+1
 
-# print(missingNumber([0,1,2,3,5]))
-
 # second
 def missingNumber(nums):
     min_n, max_n = min(nums), max(nums)
@@ -25,16 +24,11 @@ def missingNumber(nums):
     except:
         return 0 if min_n > 0 else max_n+1
 
-# print(missingNumber([9,6,4,2,3,5,7,0,1]))
-# print(missingNumber([1,2,3,5]))
+# Мои решения работают даже когда нет нуля, будь то хоть - [23,24,26], оно будет работать.
 
-# threesome :0 (not mine)
-def missingNumber(nums):
-    return sum(range(0, len(nums)+1)) - sum(nums)
+# internet solutions]
 
-# print(missingNumber([0,1]))
-
-# internet solutions ----------------------------------------
+# first
 def missingNumber(nums):
     res = len(nums)
 
@@ -43,7 +37,11 @@ def missingNumber(nums):
 
     return res
 
-# the best solution
+# second
+def missingNumber(nums):
+    return sum(range(0, len(nums)+1)) - sum(nums)
+
+# the best solution (геометрическая прогрессия)
 def missingNumber(nums):
     n = len(nums)
     s = int(n*(n+1)/2)
@@ -52,9 +50,3 @@ def missingNumber(nums):
         s -= i
     
     return s
-
-# can i just die?
-
-# print(missingNumber([0,1,2,3,5]))
-
-# Мои решения работают даже когда нет нуля, будь то хоть - [23,24,26], оно будет работать. СОСАААААТЬ!!!!)))
