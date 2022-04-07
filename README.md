@@ -1,6 +1,6 @@
 ## leetcode_patterns
 
-- [ ] ease (2/36)
+- [ ] easy (2/36)
 - [ ] medium (0/105)
 - [ ] hard (0/30)
 #
